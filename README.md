@@ -6,4 +6,11 @@ The experiments of this thesis were carried out using the code released by Merkx
 
 The code involves the usage of pre-trained network Resnet-152 (He et al. 2016) which is made freely available in PyTorch.  
 
+Sources for data are:
 
+1. flickr_audio: 
+2. Flickr8k_Dataset:
+3. dataset.json:
+4. RAVDESS:
+5. TESS:
+6. CREMA-D:
