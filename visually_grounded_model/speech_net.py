@@ -29,7 +29,7 @@ parser.add_argument('-data_loc', type = str, default = '../prep_data_trunc/flick
                     help = 'location of the feature file, default: /prep_data_trunc/flickr_features.h5')
 parser.add_argument('-split_loc', type = str, default = '../data/databases/flickr/dataset.json', 
                     help = 'location of the json file containing the data split information')
-parser.add_argument('-results_loc', type = str, default = '../results_2/',
+parser.add_argument('-results_loc', type = str, default = '../results/',
                     help = 'location to save the trained models')
 # args concerning training settings
 parser.add_argument('-batch_size', type = int, default = 32, help = 'batch size, default: 32')
