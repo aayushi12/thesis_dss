@@ -24,8 +24,8 @@ def load_obj(loc):
         return pickle.load(f)
 #%%
 
-labels_path = "../emotion_tess/correct_labels.npy"
-features_path = "../emotion_tess/"
+labels_path = "../prep_data_emotion/tess/correct_labels.npy"
+features_path = "../prep_data_emotion/tess/"
     
 #%%
 labels = np.load(labels_path)
@@ -455,51 +455,10 @@ print(val_f1_score)
 print(penalty)
 
 
-#%%
-'''
-#Input features
-#Run this cell only if input features are not saved already, else move to the next cell
-
-#Data file: ravdess_features.h5
-data_loc = features_path + "prep_data/tess_features.h5"
-
-f = h5py.File(data_loc, 'r')
-
-len(list(f.keys())) 
-
-feature_matrix = np.zeros((len(list(f.keys())),39))
-
-j = 0
-for example in f:
-    s = "/".join([example,"mfcc",example])
-    length = len([y for y in f[s]])
-    
-    
-    speech_arr_sum = np.zeros(39)   
-    
-    i = 0
-    
-    for feature_frame in f[s]:
-        speech_arr_sum += feature_frame 
-        i += 1
-
-    speech_arr_avg = speech_arr_sum/length    
-
-    feature_matrix[j,:] = speech_arr_avg
-    
-    j += 1
-
-
-np.save(features_path + "Average_MFCC_tess.npy", feature_matrix)
-
-del(feature_matrix)
-'''
-#%%
-
 #As input layer features have observations in a different order
 
-labels_path = "../emotion_tess/input_layer_labels.npy"
-features_path = "../emotion_tess/"
+labels_path = "../prep_data_emotion/tess/input_layer_labels.npy"
+features_path = "../prep_data_emotion/tess/"
     
 labels = np.load(labels_path)
 
