@@ -22,8 +22,8 @@ def load_obj(loc):
         return pickle.load(f)
 #%%
 
-labels_path = "../emotion_ravdess/correct_labels.npy"
-features_path = "../emotion_ravdess/"
+labels_path = "..prep_data_emotion/ravdess/correct_labels.npy"
+features_path = "..prep_data_emotion/ravdess/"
     
 #%%
 y = np.load(labels_path)
