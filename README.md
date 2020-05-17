@@ -8,9 +8,10 @@ The code involves the usage of pre-trained network Resnet-152 (He et al. 2016) w
 
 Sources for data are:
 
-1. flickr_audio: 
-2. Flickr8k_Dataset:
-3. dataset.json:
-4. RAVDESS:
-5. TESS:
-6. CREMA-D:
+1. flickr_audio: https://groups.csail.mit.edu/sls/downloads/flickraudio/
+2. Flickr8k_Dataset: https://machinelearningmastery.com/develop-a-deep-learning-caption-generation-model-in-python/
+3. dataset.json: https://cs.stanford.edu/people/karpathy/deepimagesent/
+4. RAVDESS: https://zenodo.org/record/1188976
+5. TESS: https://tspace.library.utoronto.ca/handle/1807/24487
+6. CREMA-D: https://github.com/CheyneyComputerScience/CREMA-D
+ 
