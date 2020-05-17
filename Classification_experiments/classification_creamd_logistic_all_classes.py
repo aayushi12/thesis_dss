@@ -23,8 +23,8 @@ def load_obj(loc):
         return pickle.load(f)
 #%%
 
-labels_path = "..prep_data_emotion/cremad/correct_labels.npy"
-features_path = "..prep_data_emotion/cremad/"
+labels_path = "../prep_data_emotion/cremad/correct_labels.npy"
+features_path = "../prep_data_emotion/cremad/"
     
 #%%
 
@@ -507,8 +507,8 @@ del(feature_matrix)
 
 #As input layer features have observations in a different order
 
-labels_path = "../emotion_cremad/input_layer_labels.npy"
-features_path = "../emotion_cremad/"
+labels_path = "../prep_data_emotion/cremad/input_layer_labels.npy"
+features_path = "../prep_data_emotion/cremad/"
     
 labels = np.load(labels_path)
 
