@@ -45,6 +45,8 @@ audio_config = {'conv':{'in_channels': 39, 'out_channels': 64, 'kernel_size': 6,
                'att':{'in_size': 2048, 'hidden_size': 128, 'heads': 1}}  
 
 trained_loc = "..visually_grounded_model/results/caption_model.30"    
+data_loc = "../prep_data_emotion/ravdess/prep_data/ravdess_features.h5"
+
 #%%
 
 full_net = audio_rnn_encoder(audio_config)
@@ -159,7 +161,6 @@ mapping = {'01': "neutral", '02':"calm", '03': 'happy', '04': 'sad', '05': 'angr
 
 
 #%%
-data_loc = "../prep_data_emotion/ravdess/prep_data/ravdess_features.h5"
 
 f = h5py.File(data_loc, 'r')
 
@@ -216,7 +217,6 @@ np.save('ravdess/' + 'actor_labels.npy', actor_ids)
     
 #Full net
     
-data_loc = "prep_data/ravdess_features.h5"
 full_net.eval()
 
 #Loading features extracted from sound clips
@@ -300,7 +300,6 @@ f.close()
 
 #Attention layer removed
 
-data_loc = "prep_data/ravdess_features.h5"
 three_layer_net.eval()
 
 #Loading features extracted from sound clips
@@ -382,7 +381,6 @@ f.close()
 
 #Two layer RNN
 
-data_loc = "prep_data/ravdess_features.h5"
 two_layer_net.eval()
 
 #Loading features extracted from sound clips
@@ -464,7 +462,6 @@ f.close()
 
 #Single layer RNN
 
-data_loc = "prep_data/ravdess_features.h5"
 single_layer_net.eval()
 
 #Loading features extracted from sound clips
@@ -547,7 +544,6 @@ f.close()
 #Conv modified
 from sklearn.preprocessing import normalize
 
-data_loc = "prep_data/ravdess_features.h5"
 untrained_net.eval()
 
 #Loading features extracted from sound clips
@@ -627,8 +623,6 @@ f.close()
 #%%
 
 #Input features
-
-data_loc = "prep_data/ravdess_features.h5"
 
 f = h5py.File(data_loc, 'r')
 
