@@ -24,8 +24,8 @@ def load_obj(loc):
         return pickle.load(f)
 #%%
 
-labels_path = "../prep_data_emotion/tess/correct_labels.npy"
-features_path = "../prep_data_emotion/tess/"
+labels_path = "../prep_features_classification/tess/correct_labels.npy"
+features_path = "../prep_features_classification/tess/"
     
 #%%
 labels = np.load(labels_path)
@@ -457,8 +457,8 @@ print(penalty)
 
 #As input layer features have observations in a different order
 
-labels_path = "../prep_data_emotion/tess/input_layer_labels.npy"
-features_path = "../prep_data_emotion/tess/"
+labels_path = "../prep_features_classification/tess/input_layer_labels.npy"
+features_path = "../prep_features_classification/tess/"
     
 labels = np.load(labels_path)
 
