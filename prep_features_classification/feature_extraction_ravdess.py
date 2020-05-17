@@ -159,7 +159,7 @@ mapping = {'01': "neutral", '02':"calm", '03': 'happy', '04': 'sad', '05': 'angr
 
 
 #%%
-data_loc = "prep_data/ravdess_features.h5"
+data_loc = "../prep_data_emotion/ravdess/prep_data/ravdess_features.h5"
 
 f = h5py.File(data_loc, 'r')
 
