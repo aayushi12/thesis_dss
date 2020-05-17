@@ -22,8 +22,8 @@ def load_obj(loc):
         return pickle.load(f)
 #%%
 
-labels_path = "..prep_data_emotion/ravdess/correct_labels.npy"
-features_path = "..prep_data_emotion/ravdess/"
+labels_path = "../prep_data_emotion/ravdess/correct_labels.npy"
+features_path = "../prep_data_emotion/ravdess/"
     
 #%%
 y = np.load(labels_path)
@@ -422,17 +422,6 @@ print(penalty)
 
 #%%
 
-#Conv Layer
-
-#X = np.load(features_path + "activations_conv_ravdess.npy")
-
-#X_avg = np.zeros((X.shape[0],X.shape[1]))
-
-#for i in range(X.shape[0]):
-    #X_avg[i,:] = np.mean(X[i,:,:], axis = 1)
-    
-#X_avg = X_avg[subset_indices,:]
-
 X = np.load(features_path + "activations_conv_norm_ravdess.npy")
 
 X = X[subset_indices,:]
@@ -516,50 +505,12 @@ print(penalty)
 
 
 #%%
-'''
-#Input features
-#Run this cell only if input features are not saved already, else move to the next cell
 
-#Data file: ravdess_features.h5
-data_loc = features_path + "prep_data/ravdess_features.h5"
-
-f = h5py.File(data_loc, 'r')
-
-len(list(f.keys())) #1440
-
-feature_matrix = np.zeros((len(list(f.keys())),39))
-
-j = 0
-for example in f:
-    s = "/".join([example,"mfcc",example])
-    length = len([y for y in f[s]])
-    
-    
-    speech_arr_sum = np.zeros(39)   
-    
-    i = 0
-    
-    for feature_frame in f[s]:
-        speech_arr_sum += feature_frame 
-        i += 1
-
-    speech_arr_avg = speech_arr_sum/length    
-
-    feature_matrix[j,:] = speech_arr_avg
-    
-    j += 1
-
-
-np.save(features_path + "Average_MFCC_ravdess.npy",feature_matrix)
-
-del(feature_matrix)
-'''
-#%%
 
 #The order of observations is different in input layer features
 
-labels_path = "../emotion_ravdess/input_layer_labels.npy"
-features_path = "../emotion_ravdess/"
+labels_path = "../prep_data_emotion/ravdess/input_layer_labels.npy"
+features_path = "../prep_data_emotion/ravdess/"
     
 y = np.load(labels_path)
 
