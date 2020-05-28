@@ -4,7 +4,7 @@ The following code can be used to replicate the results of my thesis: "Emotion r
 
 The experiments of this thesis were carried out using the code released by Merkx, Frank,and Ernestus (2019) as reference. Depending on the requirement, some modifications were made to their existing code. The emotional speech classification part was coded by me.
 
-The code involves the usage of pre-trained network Resnet-152 (He et al. 2016) which is made freely available in PyTorch.  
+The code involves the usage of pre-trained networks Resnet-152 and VGG16 which are made freely available in PyTorch.  
 
 Sources for data are:
 
